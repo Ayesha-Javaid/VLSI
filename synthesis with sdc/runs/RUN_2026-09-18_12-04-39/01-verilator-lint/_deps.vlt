@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/ayeshatalha/librelane/mydesign/lab3/runs/RUN_2026-09-18_12-04-39/tmp/e5d1d072b2cb4ccf94688e87749213fd.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/ayeshatalha/librelane/mydesign/lab3/runs/RUN_2026-09-18_12-04-39/tmp/e5d1d072b2cb4ccf94688e87749213fd.bb.v"
