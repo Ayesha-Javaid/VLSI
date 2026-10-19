@@ -1,0 +1,60 @@
+{
+    "DESIGN_NAME": "cpu",
+    "VERILOG_FILES": ["processor.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "FP_ASPECT_RATIO": 1.0,
+    "FP_CORE_UTIL": 70,
+    "CORE_SIDE_MARGIN": 2.5,
+    "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 750 950",
+    "STA_CORNERS": ["nom_tt_025C_1v80"],
+    "DEFAULT_CORNER": "nom_tt_025C_1v80",
+
+    "MACROS": {
+        "sky130_sram_1kbyte_1rw1r_32x256_8": {
+            "instances": {
+                "sram_macro0": { "location": [10, 10],  "orientation": "N" },
+                "sram_macro1": { "location": [10, 480], "orientation": "N"  }
+            },
+            "lef": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef"],
+            "gds": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"],
+            "nl":  ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/verilog/sky130_sram_1kbyte_1rw1r_32x256_8.v"],
+            "lib": {
+                "*_tt_025C_1v80": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/lib/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib"]
+            }
+        }
+    },
+"PDN_MACRO_CONNECTIONS": "sram_macro0 VPWR VGND vccd1 vssd1, sram_macro1 VPWR VGND vccd1 vssd1",
+    "FP_MACRO_HORIZONTAL_HALO": 30,
+"FP_MACRO_VERTICAL_HALO": 30,
+"GRT_ADJUSTMENT": 0.05,
+    "RUN_IRDROP_REPORT": false,
+    "meta": {
+        "flow": "Classic",
+        "substituting_steps": {
+            "KLayout.Render": null
+        }
+    },
+    "PRIMARY_GDSII_STREAMOUT_TOOL": "klayout",
+    "VDD_NETS": ["VPWR"],
+    "GND_NETS": ["VGND"],
+    "FP_TAPCELL_DIST": 13,
+    "PL_TARGET_DENSITY": 0.25,
+  
+    "PL_ROUTABILITY_DRIVEN": true,
+    "PL_RESIZER_DESIGN_OPTIMIZATIONS": true,
+    "PL_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "RUN_CTS": true,
+    "CTS_CLK_BUFFERS": ["sky130_fd_sc_hd__clkbuf_4", "sky130_fd_sc_hd__clkbuf_8"],
+    "CTS_ROOT_BUFFER": "sky130_fd_sc_hd__clkbuf_16",
+    "CTS_SINK_CLUSTERING_SIZE": 20,
+
+    "RUN_ROUTING": true,
+  "RT_MIN_LAYER": "met1",
+    "RT_MAX_LAYER": "met5",
+"GRT_ALLOW_CONGESTION": true,
+    "GRT_REPAIR_ANTENNAS": true,
+
+    "DRT_OPT_ITERS": 20
+}
