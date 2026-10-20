@@ -1,0 +1,32 @@
+{
+    "DESIGN_NAME": "sram_test",
+    "VERILOG_FILES": ["sram_test.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "FP_SIZING": "absolute",
+"DIE_AREA": "0 0 650 600",
+"PNR_SDC_FILE": "dir::my_base.sdc",
+"FALLBACK_SDC": "dir::my_base.sdc",
+"DESIGN_REPAIR_MAX_SLEW_PCT": 0,
+
+
+
+    "MACROS": {
+        "sram_1rw1r_32_256_8_sky130": {
+            "instances": {
+                "sram_macro0": { "location": [10, 10],  "orientation": "N" }
+            },
+
+            "lef": ["/home/ayeshatalha/librelane/mydesign/lab5/patched_lef/sram_1rw1r_32_256_8_sky130.lef"],
+            "gds": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/gds/sram_1rw1r_32_256_8_sky130.gds"],
+            "nl":  ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/verilog/sram_1rw1r_32_256_8_sky130.v"],
+            "lib": {
+                "*_tt_025C_1v80": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/lib/sram_1rw1r_32_256_8_sky130_TT_1p8V_25C.lib"],
+                "*_ss_100C_1v60": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/lib/sram_1rw1r_32_256_8_sky130_SS_1p8V_25C.lib"],
+                "*_ff_n40C_1v95": ["/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_sram_macros/lib/sram_1rw1r_32_256_8_sky130_FF_1p8V_25C.lib"]
+            }
+        }
+    }
+
+
+}
