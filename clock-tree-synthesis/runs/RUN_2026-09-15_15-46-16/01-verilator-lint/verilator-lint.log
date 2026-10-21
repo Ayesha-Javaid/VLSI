@@ -1,0 +1,14 @@
+%Warning-IMPORTSTAR: /home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:26:8: 'import::*' in $unit scope may pollute global namespace
+   26 | import typedefs::*;
+      |        ^~~~~~~~
+                     ... For warning description see https://verilator.org/warn/IMPORTSTAR?v=5.044
+                     ... Use "/* verilator lint_off IMPORTSTAR */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:228:47: Bits of signal are not used: 'ir_out'[63:8]
+                                                                                        : ... note: In instance 'cpu'
+  228 |   logic [63:0]      data_out, alu_out, accum, ir_out;
+      |                                               ^~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.044
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.044 2026-01-01 rev v5.040
+- Verilator: Built from 0.411 MB sources in 456 modules, into 0.038 MB in 4 C++ files needing 0.000 MB
+- Verilator: Walltime 0.067 s (elab=0.017, cvt=0.011, bld=0.000); cpu 0.065 s on 1 threads; alloced 28.258 MB

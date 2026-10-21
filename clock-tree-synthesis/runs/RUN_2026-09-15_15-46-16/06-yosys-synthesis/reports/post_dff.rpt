@@ -1,0 +1,41 @@
+122. Printing statistics.
+
+=== cpu ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     7503        - wires
+     9907        - wire bits
+       47        - public wires
+     2323        - public wire bits
+        7        - ports
+        7        - port bits
+     9843 4.84E+04 cells
+      440        -   $_ANDNOT_
+       40        -   $_AND_
+     4249        -   $_MUX_
+       41        -   $_NAND_
+       40        -   $_NOR_
+     2213        -   $_NOT_
+       41        -   $_ORNOT_
+      392        -   $_OR_
+       74        -   $_XNOR_
+       57        -   $_XOR_
+       80  2.1E+03   sky130_fd_sc_hd__dfrtp_2
+     2176 4.63E+04   sky130_fd_sc_hd__dfxtp_2
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+   Chip area for module '\cpu': 48386.406400
+     of which used for sequential elements: 48386.406400 (100.00%)
+

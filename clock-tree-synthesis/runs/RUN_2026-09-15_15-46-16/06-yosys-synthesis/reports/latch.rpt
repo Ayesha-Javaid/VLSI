@@ -1,0 +1,12 @@
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\alu.\zero' from process `\alu.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:52$42'.
+No latch inferred for signal `$paramod\scale_mux\WIDTH=s32'00000000000000000000000000000101.\out' from process `$paramod\scale_mux\WIDTH=s32'00000000000000000000000000000101.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:207$37'.
+No latch inferred for signal `\control.\halt' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\load_ir' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\load_ac' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\mem_rd' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\mem_wr' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\inc_pc' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\load_pc' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:99$12'.
+No latch inferred for signal `\control.\next_state' from process `\control.$proc$/home/ayeshatalha/librelane/mydesign/lab6/src/processor.sv:78$9'.

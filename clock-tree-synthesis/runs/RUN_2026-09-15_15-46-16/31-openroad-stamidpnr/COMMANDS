@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /home/ayeshatalha/librelane/mydesign/lab6/runs/RUN_2026-09-15_15-46-16/31-openroad-stamidpnr/or_metrics_out.json /nix/store/w7k85j27x4rq21h6ywmh331vnbrqf15k-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/openroad/sta/corner.tcl
