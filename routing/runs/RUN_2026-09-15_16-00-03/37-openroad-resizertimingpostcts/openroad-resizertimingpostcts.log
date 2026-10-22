@@ -1,0 +1,160 @@
+Reading timing models for corner max_tt_025C_1v80…
+Reading timing library for the 'max_tt_025C_1v80' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner min_ss_100C_1v60…
+Reading timing library for the 'min_ss_100C_1v60' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+[WARNING STA-1140] /home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library sky130_fd_sc_hd__tt_025C_1v80 already exists.
+Reading timing models for corner max_ff_n40C_1v95…
+Reading timing library for the 'max_ff_n40C_1v95' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+[WARNING STA-1140] /home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 1, library sky130_fd_sc_hd__ff_n40C_1v95 already exists.
+Reading timing models for corner max_ss_100C_1v60…
+Reading timing library for the 'max_ss_100C_1v60' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+[WARNING STA-1140] /home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib line 1, library sky130_fd_sc_hd__ss_100C_1v60 already exists.
+Reading timing models for corner min_tt_025C_1v80…
+Reading timing library for the 'min_tt_025C_1v80' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+[WARNING STA-1140] /home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library sky130_fd_sc_hd__tt_025C_1v80 already exists.
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+[WARNING STA-1140] /home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib line 1, library sky130_fd_sc_hd__ss_100C_1v60 already exists.
+Reading timing models for corner min_ff_n40C_1v95…
+Reading timing library for the 'min_ff_n40C_1v95' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+[WARNING STA-1140] /home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 1, library sky130_fd_sc_hd__ff_n40C_1v95 already exists.
+Reading OpenROAD database at '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/35-openroad-cts/cpu.odb'…
+Reading design constraints file at '/nix/store/w7k85j27x4rq21h6ywmh331vnbrqf15k-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2.0
+[INFO] Setting input delay to: 2.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
++ repair_timing -verbose -setup -setup_margin 0.05000000000000000277555756156289135105907917022705078125 -max_buffer_percent 50.0
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 63 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 63 out of 63 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -2.249 |      -79.8 |     63 | _14944_/D
+       10 |       1 |       8 |        0 |      0 |     0 |    -0.0% |   -1.427 |      -34.0 |     63 | _14944_/D
+       17 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     61 | _14944_/D
+       18 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     60 | _14944_/D
+       19 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     59 | _14944_/D
+       20 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     59 | _14944_/D
+       20 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     58 | _14944_/D
+       21 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     57 | _14944_/D
+       22 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     56 | _14944_/D
+       23 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     55 | _14944_/D
+       24 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     54 | _14944_/D
+       25 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     53 | _14944_/D
+       26 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     52 | _14944_/D
+       27 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     51 | _14944_/D
+       28 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     50 | _14944_/D
+       29 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     49 | _14944_/D
+       30 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     49 | _14944_/D
+       30 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     48 | _14944_/D
+       31 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     47 | _14944_/D
+       32 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     46 | _14944_/D
+       33 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     45 | _14944_/D
+       34 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     44 | _14944_/D
+       35 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     43 | _14944_/D
+       36 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     42 | _14944_/D
+       37 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     41 | _14944_/D
+       38 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     40 | _14944_/D
+       39 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     39 | _14944_/D
+       40 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     39 | _14944_/D
+       40 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     38 | _14944_/D
+       41 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     37 | _14944_/D
+       42 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     36 | _14944_/D
+       43 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     35 | _14944_/D
+       44 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     34 | _14944_/D
+       45 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     33 | _14944_/D
+       46 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     32 | _14944_/D
+       47 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     31 | _14944_/D
+       48 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     30 | _14944_/D
+       49 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     29 | _14944_/D
+       50 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     29 | _14944_/D
+       50 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     28 | _14944_/D
+       51 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     27 | _14944_/D
+       52 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     26 | _14944_/D
+       53 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     25 | _14944_/D
+       54 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     24 | _14944_/D
+       55 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     23 | _14944_/D
+       56 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     22 | _14944_/D
+       57 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     21 | _14944_/D
+       58 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     20 | _14944_/D
+       59 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     19 | _14944_/D
+       60 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     19 | _14944_/D
+       60 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     18 | _14944_/D
+       61 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     17 | _14944_/D
+       62 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     16 | _14944_/D
+       63 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     15 | _14944_/D
+       64 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     14 | _14944_/D
+       65 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     13 | _14944_/D
+       66 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     12 | _14944_/D
+       67 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     11 | _14944_/D
+       68 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |     10 | _14944_/D
+       69 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      9 | _14944_/D
+       70 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      9 | _14944_/D
+       70 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      8 | _14944_/D
+       71 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      7 | _14944_/D
+       72 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      6 | _14944_/D
+       73 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      5 | _14944_/D
+       74 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      4 | _14944_/D
+       75 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      3 | _14944_/D
+       76 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      2 | _14944_/D
+       77 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      1 | _14944_/D
+       78 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      0 | _14944_/D
+       79 |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      0 | _14944_/D
+    final |       3 |      13 |        0 |      0 |     0 |    -0.0% |    0.149 |        0.0 |      0 | _14944_/D
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 3 buffers.
+[INFO RSZ-0051] Resized 13 instances: 13 up, 0 up match, 0 down, 0 VT
++ repair_timing -verbose -hold -setup_margin 0.05000000000000000277555756156289135105907917022705078125 -hold_margin 0.1000000000000000055511151231257827021181583404541015625 -max_buffer_percent 50.0
+[INFO RSZ-0046] Found 58 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |   0.051 |   0.000 | _14996_/D
+       10 |       0 |       9 |            0 |    +0.1% |   0.072 |   0.000 | _14983_/D
+       20 |       0 |      19 |            0 |    +0.2% |   0.078 |   0.000 | _14979_/D
+       30 |       0 |      29 |            0 |    +0.2% |   0.080 |   0.000 | _14971_/D
+       40 |       0 |      39 |            0 |    +0.3% |   0.084 |   0.000 | _14966_/D
+       50 |       0 |      49 |            0 |    +0.4% |   0.090 |   0.000 | _14995_/D
+    final |       0 |      58 |            0 |    +0.5% |   0.102 |   0.000 | _14933_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 58 hold buffers.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement       2954.0 u
+average displacement        0.2 u
+max displacement           32.7 u
+original HPWL          296358.2 u
+legalized HPWL         302742.4 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 2736 instances
+[INFO DPL-0021] HPWL before          302742.4 u
+[INFO DPL-0022] HPWL after           298559.2 u
+[INFO DPL-0023] HPWL delta               -1.4 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 232 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               280    1051.01
+  Tap cell                               2059    2576.22
+  Clock buffer                             20     267.76
+  Timing Repair Buffer                   1961   17603.13
+  Inverter                               2195    8239.15
+  Sequential cell                        2256   48386.41
+  Multi-Input combinational cell         4340   45795.17
+  Total                                 13111  123918.85
+Writing OpenROAD database to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/37-openroad-resizertimingpostcts/cpu.odb'…
+Writing netlist to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/37-openroad-resizertimingpostcts/cpu.nl.v'…
+Writing powered netlist to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/37-openroad-resizertimingpostcts/cpu.pnl.v'…
+Writing layout to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/37-openroad-resizertimingpostcts/cpu.def'…
+Writing timing constraints to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/37-openroad-resizertimingpostcts/cpu.sdc'…

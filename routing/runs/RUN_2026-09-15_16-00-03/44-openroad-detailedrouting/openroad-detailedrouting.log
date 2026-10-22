@@ -1,0 +1,1731 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/ayeshatalha/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading OpenROAD database at '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/42-openroad-repairantennas/1-openroad-diodeinsertion/cpu.odb'…
+Reading design constraints file at '/nix/store/w7k85j27x4rq21h6ywmh331vnbrqf15k-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2.0
+[INFO] Setting input delay to: 2.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+[INFO ORD-0030] Using 8 thread(s).
++ detailed_route -droute_end_iter 64 -or_seed 42 -verbose 1 -output_drc /home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/drt-run-0/cpu.drc
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     445
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   cpu
+Die area:                 ( 0 0 ) ( 393525 404245 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     13134
+Number of terminals:      9
+Number of snets:          2
+Number of nets:           10774
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 124.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete licon.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] licon shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 354870.
+[INFO DRT-0033] mcon shape region query size = 0.
+[INFO DRT-0033] met1 shape region query size = 45606.
+[INFO DRT-0033] via shape region query size = 2115.
+[INFO DRT-0033] met2 shape region query size = 1274.
+[INFO DRT-0033] via2 shape region query size = 1692.
+[INFO DRT-0033] met3 shape region query size = 1271.
+[INFO DRT-0033] via3 shape region query size = 1692.
+[INFO DRT-0033] met4 shape region query size = 453.
+[INFO DRT-0033] via4 shape region query size = 18.
+[INFO DRT-0033] met5 shape region query size = 30.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 940 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 124 unique inst patterns.
+[INFO DRT-0084]   Complete 5208 groups.
+#scanned instances     = 13134
+#unique  instances     = 124
+#stdCellGenAp          = 3327
+#stdCellValidPlanarAp  = 22
+#stdCellValidViaAp     = 2557
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 34325
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:10:21, elapsed time = 00:01:18, memory = 202.01 (MB), peak = 206.41 (MB)
+
+[INFO DRT-0157] Number of guides:     83561
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 57 STEP 6900 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 58 STEP 6900 ;
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete licon.
+[INFO DRT-0028]   Complete li1.
+[INFO DRT-0028]   Complete mcon.
+[INFO DRT-0028]   Complete met1.
+[INFO DRT-0028]   Complete via.
+[INFO DRT-0028]   Complete met2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete met3.
+[INFO DRT-0028]   Complete via3.
+[INFO DRT-0028]   Complete met4.
+[INFO DRT-0028]   Complete via4.
+[INFO DRT-0028]   Complete met5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete licon (guide).
+[INFO DRT-0035]   Complete li1 (guide).
+[INFO DRT-0035]   Complete mcon (guide).
+[INFO DRT-0035]   Complete met1 (guide).
+[INFO DRT-0035]   Complete via (guide).
+[INFO DRT-0035]   Complete met2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete met3 (guide).
+[INFO DRT-0035]   Complete via3 (guide).
+[INFO DRT-0035]   Complete met4 (guide).
+[INFO DRT-0035]   Complete via4 (guide).
+[INFO DRT-0035]   Complete met5 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] licon guide region query size = 0.
+[INFO DRT-0036] li1 guide region query size = 28450.
+[INFO DRT-0036] mcon guide region query size = 0.
+[INFO DRT-0036] met1 guide region query size = 24480.
+[INFO DRT-0036] via guide region query size = 0.
+[INFO DRT-0036] met2 guide region query size = 12938.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] met3 guide region query size = 1314.
+[INFO DRT-0036] via3 guide region query size = 0.
+[INFO DRT-0036] met4 guide region query size = 446.
+[INFO DRT-0036] via4 guide region query size = 0.
+[INFO DRT-0036] met5 guide region query size = 28.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 230.90 (MB), peak = 230.01 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0185] Post process initialize RPin region query.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 41834 vertical wires in 2 frboxes and 25822 horizontal wires in 2 frboxes.
+[INFO DRT-0186] Done with 5675 vertical wires in 2 frboxes and 9771 horizontal wires in 2 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:12, elapsed time = 00:00:05, memory = 315.25 (MB), peak = 340.26 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 316.18 (MB), peak = 340.26 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:04, memory = 612.95 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:15, memory = 745.87 (MB).
+    Completing 30% with 0 violations.
+    elapsed time = 00:00:38, memory = 660.44 (MB).
+    Completing 40% with 1550 violations.
+    elapsed time = 00:00:46, memory = 830.39 (MB).
+    Completing 50% with 1550 violations.
+    elapsed time = 00:01:05, memory = 884.95 (MB).
+    Completing 60% with 3250 violations.
+    elapsed time = 00:01:23, memory = 922.38 (MB).
+    Completing 70% with 3250 violations.
+    elapsed time = 00:01:39, memory = 1014.02 (MB).
+    Completing 80% with 3250 violations.
+    elapsed time = 00:02:06, memory = 922.48 (MB).
+    Completing 90% with 5472 violations.
+    elapsed time = 00:02:27, memory = 1094.14 (MB).
+    Completing 100% with 6941 violations.
+    elapsed time = 00:02:47, memory = 944.18 (MB).
+[INFO DRT-0199]   Number of violations = 7622.
+Viol/Layer         li1   mcon   met1    via   met2   via2   met3   met4
+Cut Spacing          0      4      0      0      0      0      0      0
+Metal Spacing        0      0    912      0    253      0     12      2
+Recheck             11      0    439      0    193      0     11     27
+Short                0      0   4662      6   1067      1     18      4
+[INFO DRT-0267] cpu time = 00:16:07, elapsed time = 00:02:48, memory = 1196.96 (MB), peak = 1196.43 (MB)
+Total wire length = 364115 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 149465 um.
+Total wire length on LAYER met2 = 157380 um.
+Total wire length on LAYER met3 = 37287 um.
+Total wire length on LAYER met4 = 19402 um.
+Total wire length on LAYER met5 = 578 um.
+Total number of vias = 79514.
+Up-via summary (total 79514):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34823
+           met1    40533
+           met2     3129
+           met3      979
+           met4       50
+------------------------
+               79514
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 7622 violations.
+    elapsed time = 00:00:02, memory = 1234.21 (MB).
+    Completing 20% with 7622 violations.
+    elapsed time = 00:00:11, memory = 1267.29 (MB).
+    Completing 30% with 7622 violations.
+    elapsed time = 00:00:26, memory = 1197.64 (MB).
+    Completing 40% with 6916 violations.
+    elapsed time = 00:00:30, memory = 1331.39 (MB).
+    Completing 50% with 6916 violations.
+    elapsed time = 00:00:48, memory = 1270.31 (MB).
+    Completing 60% with 6284 violations.
+    elapsed time = 00:01:02, memory = 1268.41 (MB).
+    Completing 70% with 6284 violations.
+    elapsed time = 00:01:13, memory = 1336.01 (MB).
+    Completing 80% with 6284 violations.
+    elapsed time = 00:01:39, memory = 1217.93 (MB).
+    Completing 90% with 5656 violations.
+    elapsed time = 00:02:02, memory = 1324.82 (MB).
+    Completing 100% with 4733 violations.
+    elapsed time = 00:02:22, memory = 1217.95 (MB).
+[INFO DRT-0199]   Number of violations = 4733.
+Viol/Layer        mcon   met1   met2   met3   met4
+Cut Spacing          1      0      0      0      0
+Metal Spacing        0    456    228      6      2
+Min Hole             0      0      1      0      0
+Short                0   3379    652      6      2
+[INFO DRT-0267] cpu time = 00:13:50, elapsed time = 00:02:22, memory = 1221.07 (MB), peak = 1367.89 (MB)
+Total wire length = 361122 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 147217 um.
+Total wire length on LAYER met2 = 155784 um.
+Total wire length on LAYER met3 = 38351 um.
+Total wire length on LAYER met4 = 19157 um.
+Total wire length on LAYER met5 = 610 um.
+Total number of vias = 79045.
+Up-via summary (total 79045):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34773
+           met1    40005
+           met2     3262
+           met3      953
+           met4       52
+------------------------
+               79045
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 4733 violations.
+    elapsed time = 00:00:06, memory = 1293.79 (MB).
+    Completing 20% with 4733 violations.
+    elapsed time = 00:00:12, memory = 1362.91 (MB).
+    Completing 30% with 4733 violations.
+    elapsed time = 00:00:28, memory = 1221.65 (MB).
+    Completing 40% with 4612 violations.
+    elapsed time = 00:00:38, memory = 1257.35 (MB).
+    Completing 50% with 4612 violations.
+    elapsed time = 00:00:56, memory = 1271.60 (MB).
+    Completing 60% with 4707 violations.
+    elapsed time = 00:01:12, memory = 1326.33 (MB).
+    Completing 70% with 4707 violations.
+    elapsed time = 00:01:23, memory = 1368.18 (MB).
+    Completing 80% with 4707 violations.
+    elapsed time = 00:01:40, memory = 1226.11 (MB).
+    Completing 90% with 4655 violations.
+    elapsed time = 00:02:07, memory = 1296.63 (MB).
+    Completing 100% with 4505 violations.
+    elapsed time = 00:02:32, memory = 1228.38 (MB).
+[INFO DRT-0199]   Number of violations = 4505.
+Viol/Layer        mcon   met1    via   met2   met3   met4
+Cut Spacing          2      0      0      0      0      0
+Metal Spacing        0    500      0    149      3      0
+Short                0   3246      2    600      1      2
+[INFO DRT-0267] cpu time = 00:14:43, elapsed time = 00:02:32, memory = 1175.69 (MB), peak = 1368.00 (MB)
+Total wire length = 360050 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 146632 um.
+Total wire length on LAYER met2 = 155455 um.
+Total wire length on LAYER met3 = 38334 um.
+Total wire length on LAYER met4 = 19017 um.
+Total wire length on LAYER met5 = 609 um.
+Total number of vias = 78656.
+Up-via summary (total 78656):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34785
+           met1    39705
+           met2     3183
+           met3      933
+           met4       50
+------------------------
+               78656
+
+
+[INFO DRT-0195] Start 3rd optimization iteration.
+    Completing 10% with 4505 violations.
+    elapsed time = 00:00:01, memory = 1212.83 (MB).
+    Completing 20% with 4505 violations.
+    elapsed time = 00:00:07, memory = 1211.19 (MB).
+    Completing 30% with 4505 violations.
+    elapsed time = 00:00:38, memory = 1175.75 (MB).
+    Completing 40% with 3564 violations.
+    elapsed time = 00:00:41, memory = 1276.37 (MB).
+    Completing 50% with 3564 violations.
+    elapsed time = 00:00:51, memory = 1301.07 (MB).
+    Completing 60% with 2683 violations.
+    elapsed time = 00:01:01, memory = 1252.55 (MB).
+    Completing 70% with 2683 violations.
+    elapsed time = 00:01:05, memory = 1256.04 (MB).
+    Completing 80% with 2683 violations.
+    elapsed time = 00:01:27, memory = 1180.42 (MB).
+    Completing 90% with 1409 violations.
+    elapsed time = 00:01:41, memory = 1310.38 (MB).
+    Completing 100% with 514 violations.
+    elapsed time = 00:02:06, memory = 1220.50 (MB).
+[INFO DRT-0199]   Number of violations = 514.
+Viol/Layer        met1   met2   met3   met4
+Metal Spacing      135     60      6      1
+Short              241     62      9      0
+[INFO DRT-0267] cpu time = 00:10:44, elapsed time = 00:02:07, memory = 1220.50 (MB), peak = 1368.00 (MB)
+Total wire length = 358702 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130294 um.
+Total wire length on LAYER met2 = 152340 um.
+Total wire length on LAYER met3 = 53232 um.
+Total wire length on LAYER met4 = 22194 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80431.
+Up-via summary (total 80431):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34763
+           met1    39443
+           met2     4957
+           met3     1216
+           met4       52
+------------------------
+               80431
+
+
+[INFO DRT-0195] Start 4th optimization iteration.
+    Completing 10% with 514 violations.
+    elapsed time = 00:00:00, memory = 1220.50 (MB).
+    Completing 20% with 514 violations.
+    elapsed time = 00:00:00, memory = 1220.50 (MB).
+    Completing 30% with 514 violations.
+    elapsed time = 00:00:10, memory = 1220.50 (MB).
+    Completing 40% with 442 violations.
+    elapsed time = 00:00:10, memory = 1220.50 (MB).
+    Completing 50% with 442 violations.
+    elapsed time = 00:00:12, memory = 1329.77 (MB).
+    Completing 60% with 383 violations.
+    elapsed time = 00:00:13, memory = 1220.50 (MB).
+    Completing 70% with 383 violations.
+    elapsed time = 00:00:13, memory = 1220.50 (MB).
+    Completing 80% with 383 violations.
+    elapsed time = 00:00:23, memory = 1220.50 (MB).
+    Completing 90% with 281 violations.
+    elapsed time = 00:00:23, memory = 1220.50 (MB).
+    Completing 100% with 167 violations.
+    elapsed time = 00:00:44, memory = 1220.50 (MB).
+[INFO DRT-0199]   Number of violations = 167.
+Viol/Layer        met1    via   met2   met3
+Metal Spacing       29      0     14      2
+Short               89      1     32      0
+[INFO DRT-0267] cpu time = 00:01:58, elapsed time = 00:00:44, memory = 1220.50 (MB), peak = 1368.00 (MB)
+Total wire length = 358635 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129915 um.
+Total wire length on LAYER met2 = 152167 um.
+Total wire length on LAYER met3 = 53544 um.
+Total wire length on LAYER met4 = 22368 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80404.
+Up-via summary (total 80404):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34760
+           met1    39392
+           met2     4976
+           met3     1224
+           met4       52
+------------------------
+               80404
+
+
+[INFO DRT-0195] Start 5th optimization iteration.
+    Completing 10% with 167 violations.
+    elapsed time = 00:00:00, memory = 1220.50 (MB).
+    Completing 20% with 167 violations.
+    elapsed time = 00:00:00, memory = 1220.50 (MB).
+    Completing 30% with 167 violations.
+    elapsed time = 00:00:07, memory = 1220.50 (MB).
+    Completing 40% with 167 violations.
+    elapsed time = 00:00:07, memory = 1220.50 (MB).
+    Completing 50% with 167 violations.
+    elapsed time = 00:00:07, memory = 1220.50 (MB).
+    Completing 60% with 167 violations.
+    elapsed time = 00:00:07, memory = 1220.50 (MB).
+    Completing 70% with 167 violations.
+    elapsed time = 00:00:07, memory = 1220.50 (MB).
+    Completing 80% with 167 violations.
+    elapsed time = 00:00:10, memory = 1220.50 (MB).
+    Completing 90% with 159 violations.
+    elapsed time = 00:00:10, memory = 1220.50 (MB).
+    Completing 100% with 19 violations.
+    elapsed time = 00:00:13, memory = 1220.50 (MB).
+[INFO DRT-0199]   Number of violations = 19.
+Viol/Layer        met1
+Metal Spacing       11
+Short                8
+[INFO DRT-0267] cpu time = 00:00:24, elapsed time = 00:00:14, memory = 1220.50 (MB), peak = 1368.00 (MB)
+Total wire length = 358597 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129835 um.
+Total wire length on LAYER met2 = 152077 um.
+Total wire length on LAYER met3 = 53595 um.
+Total wire length on LAYER met4 = 22448 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80390.
+Up-via summary (total 80390):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34760
+           met1    39385
+           met2     4967
+           met3     1226
+           met4       52
+------------------------
+               80390
+
+
+[INFO DRT-0195] Start 6th guides tiles iteration.
+    Completing 20% with 19 violations.
+    elapsed time = 00:00:00, memory = 1220.50 (MB).
+    Completing 50% with 19 violations.
+    elapsed time = 00:00:05, memory = 1220.50 (MB).
+    Completing 70% with 14 violations.
+    elapsed time = 00:00:05, memory = 1220.50 (MB).
+    Completing 100% with 14 violations.
+    elapsed time = 00:00:07, memory = 1220.50 (MB).
+[INFO DRT-0199]   Number of violations = 14.
+Viol/Layer        met1   met2
+Metal Spacing       10      2
+Short                2      0
+[INFO DRT-0267] cpu time = 00:00:11, elapsed time = 00:00:07, memory = 1220.50 (MB), peak = 1368.00 (MB)
+Total wire length = 358583 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129812 um.
+Total wire length on LAYER met2 = 152004 um.
+Total wire length on LAYER met3 = 53609 um.
+Total wire length on LAYER met4 = 22516 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80391.
+Up-via summary (total 80391):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34759
+           met1    39382
+           met2     4968
+           met3     1230
+           met4       52
+------------------------
+               80391
+
+
+[INFO DRT-0195] Start 7th guides tiles iteration.
+    Completing 100% with 14 violations.
+    elapsed time = 00:00:02, memory = 1220.50 (MB).
+[INFO DRT-0199]   Number of violations = 14.
+Viol/Layer        met1   met2
+Metal Spacing       10      2
+Short                2      0
+[INFO DRT-0267] cpu time = 00:00:03, elapsed time = 00:00:02, memory = 1220.50 (MB), peak = 1368.00 (MB)
+Total wire length = 358583 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129812 um.
+Total wire length on LAYER met2 = 152004 um.
+Total wire length on LAYER met3 = 53609 um.
+Total wire length on LAYER met4 = 22516 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80391.
+Up-via summary (total 80391):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34759
+           met1    39382
+           met2     4968
+           met3     1230
+           met4       52
+------------------------
+               80391
+
+
+[INFO DRT-0195] Start 8th stubborn tiles iteration.
+    Completing 10% with 14 violations.
+    elapsed time = 00:00:30, memory = 1448.03 (MB).
+    Completing 20% with 14 violations.
+    elapsed time = 00:00:44, memory = 1385.86 (MB).
+    Completing 30% with 14 violations.
+    elapsed time = 00:00:58, memory = 1451.67 (MB).
+    Completing 40% with 14 violations.
+    elapsed time = 00:01:04, memory = 1517.55 (MB).
+    Completing 50% with 14 violations.
+    elapsed time = 00:01:34, memory = 1677.17 (MB).
+    Completing 60% with 14 violations.
+    elapsed time = 00:01:49, memory = 1745.75 (MB).
+    Completing 70% with 14 violations.
+    elapsed time = 00:01:55, memory = 1731.68 (MB).
+    Completing 80% with 14 violations.
+    elapsed time = 00:02:25, memory = 1942.94 (MB).
+    Completing 90% with 14 violations.
+    elapsed time = 00:02:38, memory = 1840.32 (MB).
+    Completing 100% with 0 violations.
+    elapsed time = 00:02:58, memory = 1734.55 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:21:39, elapsed time = 00:02:58, memory = 1701.50 (MB), peak = 2016.21 (MB)
+Total wire length = 358605 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129779 um.
+Total wire length on LAYER met2 = 152006 um.
+Total wire length on LAYER met3 = 53635 um.
+Total wire length on LAYER met4 = 22543 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80380.
+Up-via summary (total 80380):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34760
+           met1    39377
+           met2     4955
+           met3     1236
+           met4       52
+------------------------
+               80380
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 358605 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129779 um.
+Total wire length on LAYER met2 = 152006 um.
+Total wire length on LAYER met3 = 53635 um.
+Total wire length on LAYER met4 = 22543 um.
+Total wire length on LAYER met5 = 640 um.
+Total number of vias = 80380.
+Up-via summary (total 80380):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34760
+           met1    39377
+           met2     4955
+           met3     1236
+           met4       52
+------------------------
+               80380
+
+
+[INFO DRT-0267] cpu time = 01:19:46, elapsed time = 00:13:59, memory = 1701.62 (MB), peak = 2016.21 (MB)
+
+[INFO DRT-0180] Post processing.
++ check_antennas 
+[INFO ANT-0002] Found 17 net violations.
+[INFO ANT-0001] Found 18 pin violations.
+[INFO] Running antenna repair iteration 1…
++ repair_antennas sky130_fd_sc_hd__diode_2 -ratio_margin 10
+[INFO GRT-0012] Found 19 antenna violations.
+[INFO GRT-0015] Inserted 21 diodes.
++ detailed_route -droute_end_iter 64 -or_seed 42 -verbose 1 -output_drc /home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/drt-run-1/cpu.drc
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete licon.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 940 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 124 unique inst patterns.
+[INFO DRT-0084]   Complete 5205 groups.
+#scanned instances     = 13155
+#unique  instances     = 124
+#stdCellGenAp          = 3327
+#stdCellValidPlanarAp  = 22
+#stdCellValidViaAp     = 2557
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 34325
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:11:15, elapsed time = 00:01:25, memory = 1703.30 (MB), peak = 2016.21 (MB)
+
+[INFO DRT-0157] Number of guides:     83560
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 57 STEP 6900 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 58 STEP 6900 ;
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete licon.
+[INFO DRT-0028]   Complete li1.
+[INFO DRT-0028]   Complete mcon.
+[INFO DRT-0028]   Complete met1.
+[INFO DRT-0028]   Complete via.
+[INFO DRT-0028]   Complete met2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete met3.
+[INFO DRT-0028]   Complete via3.
+[INFO DRT-0028]   Complete met4.
+[INFO DRT-0028]   Complete via4.
+[INFO DRT-0028]   Complete met5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete licon (guide).
+[INFO DRT-0035]   Complete li1 (guide).
+[INFO DRT-0035]   Complete mcon (guide).
+[INFO DRT-0035]   Complete met1 (guide).
+[INFO DRT-0035]   Complete via (guide).
+[INFO DRT-0035]   Complete met2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete met3 (guide).
+[INFO DRT-0035]   Complete via3 (guide).
+[INFO DRT-0035]   Complete met4 (guide).
+[INFO DRT-0035]   Complete via4 (guide).
+[INFO DRT-0035]   Complete met5 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] licon guide region query size = 0.
+[INFO DRT-0036] li1 guide region query size = 28465.
+[INFO DRT-0036] mcon guide region query size = 0.
+[INFO DRT-0036] met1 guide region query size = 24494.
+[INFO DRT-0036] via guide region query size = 0.
+[INFO DRT-0036] met2 guide region query size = 12945.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] met3 guide region query size = 1302.
+[INFO DRT-0036] via3 guide region query size = 0.
+[INFO DRT-0036] met4 guide region query size = 425.
+[INFO DRT-0036] via4 guide region query size = 0.
+[INFO DRT-0036] met5 guide region query size = 22.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 1703.30 (MB), peak = 2016.21 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0185] Post process initialize RPin region query.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 41835 vertical wires in 2 frboxes and 25818 horizontal wires in 2 frboxes.
+[INFO DRT-0186] Done with 5729 vertical wires in 2 frboxes and 9783 horizontal wires in 2 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:12, elapsed time = 00:00:05, memory = 1703.30 (MB), peak = 2016.21 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1703.30 (MB), peak = 2016.21 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:01, memory = 1773.92 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:02, memory = 1807.52 (MB).
+    Completing 30% with 0 violations.
+    elapsed time = 00:00:10, memory = 1704.54 (MB).
+    Completing 40% with 388 violations.
+    elapsed time = 00:00:12, memory = 1804.91 (MB).
+    Completing 50% with 388 violations.
+    elapsed time = 00:00:15, memory = 1777.54 (MB).
+    Completing 60% with 675 violations.
+    elapsed time = 00:00:21, memory = 1780.00 (MB).
+    Completing 70% with 675 violations.
+    elapsed time = 00:00:23, memory = 1783.37 (MB).
+    Completing 80% with 675 violations.
+    elapsed time = 00:00:34, memory = 1706.44 (MB).
+    Completing 90% with 929 violations.
+    elapsed time = 00:00:38, memory = 1739.32 (MB).
+    Completing 100% with 1095 violations.
+    elapsed time = 00:00:42, memory = 1706.50 (MB).
+[INFO DRT-0199]   Number of violations = 1237.
+Viol/Layer         li1   met1    via   met2   met3   met4
+Metal Spacing        0     53      0     68      6      1
+Recheck              1     80      0     45     12      4
+Short                0    480      1    448     35      3
+[INFO DRT-0267] cpu time = 00:03:05, elapsed time = 00:00:42, memory = 1833.76 (MB), peak = 2016.21 (MB)
+Total wire length = 358854 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 131250 um.
+Total wire length on LAYER met2 = 152892 um.
+Total wire length on LAYER met3 = 52310 um.
+Total wire length on LAYER met4 = 21874 um.
+Total wire length on LAYER met5 = 526 um.
+Total number of vias = 80467.
+Up-via summary (total 80467):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34793
+           met1    39557
+           met2     4896
+           met3     1177
+           met4       44
+------------------------
+               80467
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 1237 violations.
+    elapsed time = 00:00:00, memory = 1906.59 (MB).
+    Completing 20% with 1237 violations.
+    elapsed time = 00:00:02, memory = 1906.59 (MB).
+    Completing 30% with 1237 violations.
+    elapsed time = 00:00:07, memory = 1834.60 (MB).
+    Completing 40% with 906 violations.
+    elapsed time = 00:00:08, memory = 1969.61 (MB).
+    Completing 50% with 906 violations.
+    elapsed time = 00:00:11, memory = 1904.44 (MB).
+    Completing 60% with 731 violations.
+    elapsed time = 00:00:13, memory = 1905.94 (MB).
+    Completing 70% with 731 violations.
+    elapsed time = 00:00:15, memory = 1943.53 (MB).
+    Completing 80% with 731 violations.
+    elapsed time = 00:00:18, memory = 1834.60 (MB).
+    Completing 90% with 576 violations.
+    elapsed time = 00:00:21, memory = 1983.01 (MB).
+    Completing 100% with 388 violations.
+    elapsed time = 00:00:27, memory = 1834.70 (MB).
+[INFO DRT-0199]   Number of violations = 388.
+Viol/Layer        met1   met2   met3
+Metal Spacing       11     27     14
+Short              181    141     14
+[INFO DRT-0267] cpu time = 00:02:28, elapsed time = 00:00:27, memory = 1834.82 (MB), peak = 2016.21 (MB)
+Total wire length = 358551 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 131061 um.
+Total wire length on LAYER met2 = 152632 um.
+Total wire length on LAYER met3 = 52371 um.
+Total wire length on LAYER met4 = 21962 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80407.
+Up-via summary (total 80407):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34792
+           met1    39492
+           met2     4894
+           met3     1185
+           met4       44
+------------------------
+               80407
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 388 violations.
+    elapsed time = 00:00:00, memory = 1834.82 (MB).
+    Completing 20% with 388 violations.
+    elapsed time = 00:00:00, memory = 1834.82 (MB).
+    Completing 30% with 388 violations.
+    elapsed time = 00:00:04, memory = 1834.82 (MB).
+    Completing 40% with 383 violations.
+    elapsed time = 00:00:04, memory = 1834.82 (MB).
+    Completing 50% with 383 violations.
+    elapsed time = 00:00:06, memory = 1871.79 (MB).
+    Completing 60% with 376 violations.
+    elapsed time = 00:00:09, memory = 1834.82 (MB).
+    Completing 70% with 376 violations.
+    elapsed time = 00:00:09, memory = 1834.82 (MB).
+    Completing 80% with 376 violations.
+    elapsed time = 00:00:13, memory = 1834.82 (MB).
+    Completing 90% with 361 violations.
+    elapsed time = 00:00:13, memory = 1834.82 (MB).
+    Completing 100% with 338 violations.
+    elapsed time = 00:00:19, memory = 1834.82 (MB).
+[INFO DRT-0199]   Number of violations = 338.
+Viol/Layer        met1   met2   met3   met4
+Metal Spacing       19     26     11      0
+Short              174     90     15      3
+[INFO DRT-0267] cpu time = 00:01:10, elapsed time = 00:00:20, memory = 1834.82 (MB), peak = 2016.21 (MB)
+Total wire length = 358526 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 131073 um.
+Total wire length on LAYER met2 = 152582 um.
+Total wire length on LAYER met3 = 52366 um.
+Total wire length on LAYER met4 = 21981 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80396.
+Up-via summary (total 80396):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34796
+           met1    39476
+           met2     4894
+           met3     1186
+           met4       44
+------------------------
+               80396
+
+
+[INFO DRT-0195] Start 3rd optimization iteration.
+    Completing 10% with 338 violations.
+    elapsed time = 00:00:00, memory = 1834.82 (MB).
+    Completing 20% with 338 violations.
+    elapsed time = 00:00:00, memory = 1834.82 (MB).
+    Completing 30% with 338 violations.
+    elapsed time = 00:00:04, memory = 1834.82 (MB).
+    Completing 40% with 277 violations.
+    elapsed time = 00:00:04, memory = 1834.82 (MB).
+    Completing 50% with 277 violations.
+    elapsed time = 00:00:05, memory = 1935.84 (MB).
+    Completing 60% with 159 violations.
+    elapsed time = 00:00:14, memory = 1834.82 (MB).
+    Completing 70% with 159 violations.
+    elapsed time = 00:00:14, memory = 1834.82 (MB).
+    Completing 80% with 159 violations.
+    elapsed time = 00:00:37, memory = 1834.82 (MB).
+    Completing 90% with 111 violations.
+    elapsed time = 00:00:37, memory = 1834.82 (MB).
+    Completing 100% with 48 violations.
+    elapsed time = 00:00:44, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 48.
+Viol/Layer        met1   met2   met4
+Metal Spacing        8      2      0
+Short               26      9      3
+[INFO DRT-0267] cpu time = 00:01:36, elapsed time = 00:00:44, memory = 1848.85 (MB), peak = 2016.21 (MB)
+Total wire length = 358425 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130160 um.
+Total wire length on LAYER met2 = 152084 um.
+Total wire length on LAYER met3 = 53205 um.
+Total wire length on LAYER met4 = 22451 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80507.
+Up-via summary (total 80507):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34799
+           met1    39469
+           met2     4968
+           met3     1227
+           met4       44
+------------------------
+               80507
+
+
+[INFO DRT-0195] Start 4th guides tiles iteration.
+    Completing 20% with 48 violations.
+    elapsed time = 00:00:00, memory = 1950.36 (MB).
+    Completing 40% with 48 violations.
+    elapsed time = 00:00:00, memory = 1950.36 (MB).
+    Completing 60% with 48 violations.
+    elapsed time = 00:00:21, memory = 1848.85 (MB).
+    Completing 80% with 8 violations.
+    elapsed time = 00:00:22, memory = 1997.48 (MB).
+    Completing 100% with 4 violations.
+    elapsed time = 00:00:26, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 4.
+Viol/Layer        met2
+Metal Spacing        1
+Short                3
+[INFO DRT-0267] cpu time = 00:00:31, elapsed time = 00:00:26, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358449 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130072 um.
+Total wire length on LAYER met2 = 151956 um.
+Total wire length on LAYER met3 = 53295 um.
+Total wire length on LAYER met4 = 22602 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80523.
+Up-via summary (total 80523):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34801
+           met1    39470
+           met2     4977
+           met3     1231
+           met4       44
+------------------------
+               80523
+
+
+[INFO DRT-0195] Start 5th guides tiles iteration.
+    Completing 50% with 4 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 100% with 0 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:00:03, elapsed time = 00:00:00, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358446 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130074 um.
+Total wire length on LAYER met2 = 151951 um.
+Total wire length on LAYER met3 = 53295 um.
+Total wire length on LAYER met4 = 22602 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80521.
+Up-via summary (total 80521):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34801
+           met1    39468
+           met2     4977
+           met3     1231
+           met4       44
+------------------------
+               80521
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 358446 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130074 um.
+Total wire length on LAYER met2 = 151951 um.
+Total wire length on LAYER met3 = 53295 um.
+Total wire length on LAYER met4 = 22602 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80521.
+Up-via summary (total 80521):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34801
+           met1    39468
+           met2     4977
+           met3     1231
+           met4       44
+------------------------
+               80521
+
+
+[INFO DRT-0267] cpu time = 00:08:59, elapsed time = 00:02:42, memory = 1848.85 (MB), peak = 2018.73 (MB)
+
+[INFO DRT-0180] Post processing.
++ check_antennas 
+[INFO ANT-0002] Found 3 net violations.
+[INFO ANT-0001] Found 4 pin violations.
+[INFO] Running antenna repair iteration 2…
++ repair_antennas sky130_fd_sc_hd__diode_2 -ratio_margin 10
+[INFO GRT-0012] Found 4 antenna violations.
+[INFO GRT-0015] Inserted 5 diodes.
++ detailed_route -droute_end_iter 64 -or_seed 42 -verbose 1 -output_drc /home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/drt-run-2/cpu.drc
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete licon.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 940 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 124 unique inst patterns.
+[INFO DRT-0084]   Complete 5202 groups.
+#scanned instances     = 13160
+#unique  instances     = 124
+#stdCellGenAp          = 3327
+#stdCellValidPlanarAp  = 22
+#stdCellValidViaAp     = 2557
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 34325
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:11:16, elapsed time = 00:01:26, memory = 1848.85 (MB), peak = 2018.73 (MB)
+
+[INFO DRT-0157] Number of guides:     83556
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 57 STEP 6900 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 58 STEP 6900 ;
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete licon.
+[INFO DRT-0028]   Complete li1.
+[INFO DRT-0028]   Complete mcon.
+[INFO DRT-0028]   Complete met1.
+[INFO DRT-0028]   Complete via.
+[INFO DRT-0028]   Complete met2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete met3.
+[INFO DRT-0028]   Complete via3.
+[INFO DRT-0028]   Complete met4.
+[INFO DRT-0028]   Complete via4.
+[INFO DRT-0028]   Complete met5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete licon (guide).
+[INFO DRT-0035]   Complete li1 (guide).
+[INFO DRT-0035]   Complete mcon (guide).
+[INFO DRT-0035]   Complete met1 (guide).
+[INFO DRT-0035]   Complete via (guide).
+[INFO DRT-0035]   Complete met2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete met3 (guide).
+[INFO DRT-0035]   Complete via3 (guide).
+[INFO DRT-0035]   Complete met4 (guide).
+[INFO DRT-0035]   Complete via4 (guide).
+[INFO DRT-0035]   Complete met5 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] licon guide region query size = 0.
+[INFO DRT-0036] li1 guide region query size = 28469.
+[INFO DRT-0036] mcon guide region query size = 0.
+[INFO DRT-0036] met1 guide region query size = 24498.
+[INFO DRT-0036] via guide region query size = 0.
+[INFO DRT-0036] met2 guide region query size = 12948.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] met3 guide region query size = 1296.
+[INFO DRT-0036] via3 guide region query size = 0.
+[INFO DRT-0036] met4 guide region query size = 420.
+[INFO DRT-0036] via4 guide region query size = 0.
+[INFO DRT-0036] met5 guide region query size = 22.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:01, elapsed time = 00:00:00, memory = 1848.85 (MB), peak = 2018.73 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0185] Post process initialize RPin region query.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 41837 vertical wires in 2 frboxes and 25816 horizontal wires in 2 frboxes.
+[INFO DRT-0186] Done with 5759 vertical wires in 2 frboxes and 9741 horizontal wires in 2 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:12, elapsed time = 00:00:05, memory = 1848.85 (MB), peak = 2018.73 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1848.85 (MB), peak = 2018.73 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:01, memory = 1886.34 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:01, memory = 1885.12 (MB).
+    Completing 30% with 0 violations.
+    elapsed time = 00:00:08, memory = 1848.85 (MB).
+    Completing 40% with 99 violations.
+    elapsed time = 00:00:10, memory = 1914.41 (MB).
+    Completing 50% with 99 violations.
+    elapsed time = 00:00:12, memory = 1882.26 (MB).
+    Completing 60% with 171 violations.
+    elapsed time = 00:00:14, memory = 1883.15 (MB).
+    Completing 70% with 171 violations.
+    elapsed time = 00:00:15, memory = 1887.06 (MB).
+    Completing 80% with 171 violations.
+    elapsed time = 00:00:17, memory = 1848.85 (MB).
+    Completing 90% with 244 violations.
+    elapsed time = 00:00:20, memory = 1886.06 (MB).
+    Completing 100% with 298 violations.
+    elapsed time = 00:00:22, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 349.
+Viol/Layer         li1   met1   met2   met3   met4
+Metal Spacing        0     14      5      1      0
+Recheck              1     22     22      5      1
+Short                0    145    108     25      0
+[INFO DRT-0267] cpu time = 00:02:01, elapsed time = 00:00:22, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358696 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130408 um.
+Total wire length on LAYER met2 = 152233 um.
+Total wire length on LAYER met3 = 53130 um.
+Total wire length on LAYER met4 = 22402 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80516.
+Up-via summary (total 80516):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34809
+           met1    39503
+           met2     4953
+           met3     1207
+           met4       44
+------------------------
+               80516
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 349 violations.
+    elapsed time = 00:00:00, memory = 1921.43 (MB).
+    Completing 20% with 349 violations.
+    elapsed time = 00:00:02, memory = 1921.43 (MB).
+    Completing 30% with 349 violations.
+    elapsed time = 00:00:04, memory = 1848.85 (MB).
+    Completing 40% with 286 violations.
+    elapsed time = 00:00:05, memory = 1917.74 (MB).
+    Completing 50% with 286 violations.
+    elapsed time = 00:00:07, memory = 1919.69 (MB).
+    Completing 60% with 238 violations.
+    elapsed time = 00:00:09, memory = 1882.88 (MB).
+    Completing 70% with 238 violations.
+    elapsed time = 00:00:10, memory = 1921.70 (MB).
+    Completing 80% with 238 violations.
+    elapsed time = 00:00:13, memory = 1848.85 (MB).
+    Completing 90% with 152 violations.
+    elapsed time = 00:00:16, memory = 1888.06 (MB).
+    Completing 100% with 116 violations.
+    elapsed time = 00:00:19, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 116.
+Viol/Layer        met1   met2   met3
+Metal Spacing        1      3      2
+Short               61     41      8
+[INFO DRT-0267] cpu time = 00:01:59, elapsed time = 00:00:19, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358592 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130357 um.
+Total wire length on LAYER met2 = 152183 um.
+Total wire length on LAYER met3 = 53115 um.
+Total wire length on LAYER met4 = 22414 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80485.
+Up-via summary (total 80485):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34807
+           met1    39480
+           met2     4942
+           met3     1212
+           met4       44
+------------------------
+               80485
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 116 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 20% with 116 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 30% with 116 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 40% with 112 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 50% with 112 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 60% with 110 violations.
+    elapsed time = 00:00:04, memory = 1848.85 (MB).
+    Completing 70% with 110 violations.
+    elapsed time = 00:00:04, memory = 1848.85 (MB).
+    Completing 80% with 110 violations.
+    elapsed time = 00:00:06, memory = 1848.85 (MB).
+    Completing 90% with 104 violations.
+    elapsed time = 00:00:06, memory = 1848.85 (MB).
+    Completing 100% with 112 violations.
+    elapsed time = 00:00:11, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 112.
+Viol/Layer        met1   met2   met3
+Metal Spacing        7     11      1
+Short               37     53      3
+[INFO DRT-0267] cpu time = 00:00:34, elapsed time = 00:00:11, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358592 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130348 um.
+Total wire length on LAYER met2 = 152201 um.
+Total wire length on LAYER met3 = 53093 um.
+Total wire length on LAYER met4 = 22426 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80483.
+Up-via summary (total 80483):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34808
+           met1    39480
+           met2     4940
+           met3     1211
+           met4       44
+------------------------
+               80483
+
+
+[INFO DRT-0195] Start 3rd optimization iteration.
+    Completing 10% with 112 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 20% with 112 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 30% with 112 violations.
+    elapsed time = 00:00:05, memory = 1848.85 (MB).
+    Completing 40% with 98 violations.
+    elapsed time = 00:00:05, memory = 1848.85 (MB).
+    Completing 50% with 98 violations.
+    elapsed time = 00:00:06, memory = 1914.69 (MB).
+    Completing 60% with 91 violations.
+    elapsed time = 00:00:09, memory = 1848.85 (MB).
+    Completing 70% with 91 violations.
+    elapsed time = 00:00:09, memory = 1848.85 (MB).
+    Completing 80% with 91 violations.
+    elapsed time = 00:00:11, memory = 1848.85 (MB).
+    Completing 90% with 46 violations.
+    elapsed time = 00:00:11, memory = 1848.85 (MB).
+    Completing 100% with 22 violations.
+    elapsed time = 00:00:13, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 22.
+Viol/Layer        met1   met3
+Metal Spacing        4      0
+Short               17      1
+[INFO DRT-0267] cpu time = 00:00:38, elapsed time = 00:00:14, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358608 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130259 um.
+Total wire length on LAYER met2 = 152006 um.
+Total wire length on LAYER met3 = 53208 um.
+Total wire length on LAYER met4 = 22611 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 80519.
+Up-via summary (total 80519):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34808
+           met1    39474
+           met2     4969
+           met3     1224
+           met4       44
+------------------------
+               80519
+
+
+[INFO DRT-0195] Start 4th guides tiles iteration.
+    Completing 20% with 22 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 50% with 22 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 70% with 22 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 100% with 2 violations.
+    elapsed time = 00:00:01, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 2.
+Viol/Layer        met1
+Short                2
+[INFO DRT-0267] cpu time = 00:00:06, elapsed time = 00:00:01, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358606 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130193 um.
+Total wire length on LAYER met2 = 152001 um.
+Total wire length on LAYER met3 = 53135 um.
+Total wire length on LAYER met4 = 22616 um.
+Total wire length on LAYER met5 = 660 um.
+Total number of vias = 80518.
+Up-via summary (total 80518):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34808
+           met1    39471
+           met2     4973
+           met3     1224
+           met4       42
+------------------------
+               80518
+
+
+[INFO DRT-0195] Start 5th guides tiles iteration.
+    Completing 100% with 0 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:00:03, elapsed time = 00:00:00, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358603 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130188 um.
+Total wire length on LAYER met2 = 152003 um.
+Total wire length on LAYER met3 = 53135 um.
+Total wire length on LAYER met4 = 22616 um.
+Total wire length on LAYER met5 = 660 um.
+Total number of vias = 80520.
+Up-via summary (total 80520):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34808
+           met1    39473
+           met2     4973
+           met3     1224
+           met4       42
+------------------------
+               80520
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 358603 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130188 um.
+Total wire length on LAYER met2 = 152003 um.
+Total wire length on LAYER met3 = 53135 um.
+Total wire length on LAYER met4 = 22616 um.
+Total wire length on LAYER met5 = 660 um.
+Total number of vias = 80520.
+Up-via summary (total 80520):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34808
+           met1    39473
+           met2     4973
+           met3     1224
+           met4       42
+------------------------
+               80520
+
+
+[INFO DRT-0267] cpu time = 00:05:26, elapsed time = 00:01:10, memory = 1848.85 (MB), peak = 2018.73 (MB)
+
+[INFO DRT-0180] Post processing.
++ check_antennas 
+[INFO ANT-0002] Found 2 net violations.
+[INFO ANT-0001] Found 2 pin violations.
+[INFO] Running antenna repair iteration 3…
++ repair_antennas sky130_fd_sc_hd__diode_2 -ratio_margin 10
+[INFO GRT-0012] Found 2 antenna violations.
+[INFO GRT-0015] Inserted 2 diodes.
++ detailed_route -droute_end_iter 64 -or_seed 42 -verbose 1 -output_drc /home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/drt-run-3/cpu.drc
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete licon.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 940 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 124 unique inst patterns.
+[INFO DRT-0084]   Complete 5201 groups.
+#scanned instances     = 13162
+#unique  instances     = 124
+#stdCellGenAp          = 3327
+#stdCellValidPlanarAp  = 22
+#stdCellValidViaAp     = 2557
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 34325
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:12:13, elapsed time = 00:01:33, memory = 1848.85 (MB), peak = 2018.73 (MB)
+
+[INFO DRT-0157] Number of guides:     83558
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 57 STEP 6900 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 58 STEP 6900 ;
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete licon.
+[INFO DRT-0028]   Complete li1.
+[INFO DRT-0028]   Complete mcon.
+[INFO DRT-0028]   Complete met1.
+[INFO DRT-0028]   Complete via.
+[INFO DRT-0028]   Complete met2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete met3.
+[INFO DRT-0028]   Complete via3.
+[INFO DRT-0028]   Complete met4.
+[INFO DRT-0028]   Complete via4.
+[INFO DRT-0028]   Complete met5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete licon (guide).
+[INFO DRT-0035]   Complete li1 (guide).
+[INFO DRT-0035]   Complete mcon (guide).
+[INFO DRT-0035]   Complete met1 (guide).
+[INFO DRT-0035]   Complete via (guide).
+[INFO DRT-0035]   Complete met2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete met3 (guide).
+[INFO DRT-0035]   Complete via3 (guide).
+[INFO DRT-0035]   Complete met4 (guide).
+[INFO DRT-0035]   Complete via4 (guide).
+[INFO DRT-0035]   Complete met5 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] licon guide region query size = 0.
+[INFO DRT-0036] li1 guide region query size = 28471.
+[INFO DRT-0036] mcon guide region query size = 0.
+[INFO DRT-0036] met1 guide region query size = 24499.
+[INFO DRT-0036] via guide region query size = 0.
+[INFO DRT-0036] met2 guide region query size = 12945.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] met3 guide region query size = 1298.
+[INFO DRT-0036] via3 guide region query size = 0.
+[INFO DRT-0036] met4 guide region query size = 421.
+[INFO DRT-0036] via4 guide region query size = 0.
+[INFO DRT-0036] met5 guide region query size = 22.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 1848.85 (MB), peak = 2018.73 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0185] Post process initialize RPin region query.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 41837 vertical wires in 2 frboxes and 25819 horizontal wires in 2 frboxes.
+[INFO DRT-0186] Done with 5747 vertical wires in 2 frboxes and 9764 horizontal wires in 2 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:12, elapsed time = 00:00:05, memory = 1848.85 (MB), peak = 2018.73 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1848.85 (MB), peak = 2018.73 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:01, memory = 1886.50 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:01, memory = 1885.85 (MB).
+    Completing 30% with 0 violations.
+    elapsed time = 00:00:04, memory = 1848.85 (MB).
+    Completing 40% with 40 violations.
+    elapsed time = 00:00:05, memory = 1914.41 (MB).
+    Completing 50% with 40 violations.
+    elapsed time = 00:00:07, memory = 1882.30 (MB).
+    Completing 60% with 62 violations.
+    elapsed time = 00:00:09, memory = 1883.13 (MB).
+    Completing 70% with 62 violations.
+    elapsed time = 00:00:11, memory = 1886.97 (MB).
+    Completing 80% with 62 violations.
+    elapsed time = 00:00:15, memory = 1848.85 (MB).
+    Completing 90% with 149 violations.
+    elapsed time = 00:00:19, memory = 1886.12 (MB).
+    Completing 100% with 215 violations.
+    elapsed time = 00:00:21, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 234.
+Viol/Layer        met1   met2   met3   met4
+Metal Spacing        6      9      5      0
+Recheck              6     10      1      2
+Short               97     93      3      2
+[INFO DRT-0267] cpu time = 00:02:09, elapsed time = 00:00:21, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358731 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130473 um.
+Total wire length on LAYER met2 = 152126 um.
+Total wire length on LAYER met3 = 52896 um.
+Total wire length on LAYER met4 = 22573 um.
+Total wire length on LAYER met5 = 660 um.
+Total number of vias = 80522.
+Up-via summary (total 80522):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34813
+           met1    39513
+           met2     4938
+           met3     1216
+           met4       42
+------------------------
+               80522
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 234 violations.
+    elapsed time = 00:00:00, memory = 1891.16 (MB).
+    Completing 20% with 234 violations.
+    elapsed time = 00:00:02, memory = 1922.01 (MB).
+    Completing 30% with 234 violations.
+    elapsed time = 00:00:03, memory = 1848.85 (MB).
+    Completing 40% with 209 violations.
+    elapsed time = 00:00:05, memory = 1917.99 (MB).
+    Completing 50% with 209 violations.
+    elapsed time = 00:00:07, memory = 1884.86 (MB).
+    Completing 60% with 189 violations.
+    elapsed time = 00:00:09, memory = 1882.96 (MB).
+    Completing 70% with 189 violations.
+    elapsed time = 00:00:11, memory = 1921.82 (MB).
+    Completing 80% with 189 violations.
+    elapsed time = 00:00:14, memory = 1848.85 (MB).
+    Completing 90% with 165 violations.
+    elapsed time = 00:00:17, memory = 1888.14 (MB).
+    Completing 100% with 108 violations.
+    elapsed time = 00:00:19, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 108.
+Viol/Layer        met1   met2   met3   met4
+Metal Spacing        5      6      0      0
+Short               64     30      2      1
+[INFO DRT-0267] cpu time = 00:02:01, elapsed time = 00:00:20, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358669 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130439 um.
+Total wire length on LAYER met2 = 152099 um.
+Total wire length on LAYER met3 = 52902 um.
+Total wire length on LAYER met4 = 22568 um.
+Total wire length on LAYER met5 = 660 um.
+Total number of vias = 80500.
+Up-via summary (total 80500):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34814
+           met1    39491
+           met2     4938
+           met3     1215
+           met4       42
+------------------------
+               80500
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 108 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 20% with 108 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 30% with 108 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 40% with 129 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 50% with 129 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 60% with 124 violations.
+    elapsed time = 00:00:05, memory = 1848.85 (MB).
+    Completing 70% with 124 violations.
+    elapsed time = 00:00:05, memory = 1848.85 (MB).
+    Completing 80% with 124 violations.
+    elapsed time = 00:00:07, memory = 1848.85 (MB).
+    Completing 90% with 100 violations.
+    elapsed time = 00:00:07, memory = 1848.85 (MB).
+    Completing 100% with 96 violations.
+    elapsed time = 00:00:09, memory = 1848.85 (MB).
+[INFO DRT-0199]   Number of violations = 96.
+Viol/Layer        met1   met2   met3   met4
+Metal Spacing        7      0      0      0
+Short               67     19      2      1
+[INFO DRT-0267] cpu time = 00:00:31, elapsed time = 00:00:09, memory = 1848.85 (MB), peak = 2018.73 (MB)
+Total wire length = 358667 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 130414 um.
+Total wire length on LAYER met2 = 152095 um.
+Total wire length on LAYER met3 = 52934 um.
+Total wire length on LAYER met4 = 22562 um.
+Total wire length on LAYER met5 = 660 um.
+Total number of vias = 80496.
+Up-via summary (total 80496):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34812
+           met1    39481
+           met2     4945
+           met3     1216
+           met4       42
+------------------------
+               80496
+
+
+[INFO DRT-0195] Start 3rd guides tiles iteration.
+    Completing 10% with 96 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 20% with 96 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 30% with 96 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 40% with 96 violations.
+    elapsed time = 00:00:00, memory = 1848.85 (MB).
+    Completing 50% with 96 violations.
+    elapsed time = 00:00:02, memory = 1848.85 (MB).
+    Completing 60% with 96 violations.
+    elapsed time = 00:00:16, memory = 1848.90 (MB).
+    Completing 70% with 15 violations.
+    elapsed time = 00:00:16, memory = 1848.90 (MB).
+    Completing 80% with 15 violations.
+    elapsed time = 00:00:17, memory = 2002.08 (MB).
+    Completing 90% with 15 violations.
+    elapsed time = 00:00:17, memory = 2002.08 (MB).
+    Completing 100% with 4 violations.
+    elapsed time = 00:00:41, memory = 1848.90 (MB).
+[INFO DRT-0199]   Number of violations = 4.
+Viol/Layer        met2
+Short                4
+[INFO DRT-0267] cpu time = 00:01:08, elapsed time = 00:00:42, memory = 1848.90 (MB), peak = 2129.71 (MB)
+Total wire length = 358663 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129987 um.
+Total wire length on LAYER met2 = 151951 um.
+Total wire length on LAYER met3 = 53322 um.
+Total wire length on LAYER met4 = 22700 um.
+Total wire length on LAYER met5 = 701 um.
+Total number of vias = 80521.
+Up-via summary (total 80521):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34811
+           met1    39473
+           met2     4968
+           met3     1225
+           met4       44
+------------------------
+               80521
+
+
+[INFO DRT-0195] Start 4th guides tiles iteration.
+    Completing 50% with 4 violations.
+    elapsed time = 00:00:10, memory = 1848.90 (MB).
+    Completing 100% with 4 violations.
+    elapsed time = 00:00:11, memory = 1848.90 (MB).
+[INFO DRT-0199]   Number of violations = 4.
+Viol/Layer        met2
+Short                4
+[INFO DRT-0267] cpu time = 00:00:14, elapsed time = 00:00:11, memory = 1848.90 (MB), peak = 2129.71 (MB)
+Total wire length = 358663 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129987 um.
+Total wire length on LAYER met2 = 151951 um.
+Total wire length on LAYER met3 = 53322 um.
+Total wire length on LAYER met4 = 22700 um.
+Total wire length on LAYER met5 = 701 um.
+Total number of vias = 80521.
+Up-via summary (total 80521):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34811
+           met1    39473
+           met2     4968
+           met3     1225
+           met4       44
+------------------------
+               80521
+
+
+[INFO DRT-0195] Start 5th stubborn tiles iteration.
+    Completing 10% with 4 violations.
+    elapsed time = 00:00:01, memory = 1848.90 (MB).
+    Completing 20% with 4 violations.
+    elapsed time = 00:00:03, memory = 1848.90 (MB).
+    Completing 30% with 4 violations.
+    elapsed time = 00:00:05, memory = 1848.90 (MB).
+    Completing 40% with 4 violations.
+    elapsed time = 00:00:07, memory = 1853.03 (MB).
+    Completing 50% with 4 violations.
+    elapsed time = 00:00:09, memory = 1856.36 (MB).
+    Completing 60% with 3 violations.
+    elapsed time = 00:00:15, memory = 1969.83 (MB).
+    Completing 70% with 3 violations.
+    elapsed time = 00:00:21, memory = 2007.72 (MB).
+    Completing 80% with 3 violations.
+    elapsed time = 00:00:28, memory = 1991.16 (MB).
+    Completing 90% with 3 violations.
+    elapsed time = 00:01:03, memory = 2120.48 (MB).
+    Completing 100% with 0 violations.
+    elapsed time = 00:01:24, memory = 1985.54 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:09:59, elapsed time = 00:01:24, memory = 1985.54 (MB), peak = 2129.71 (MB)
+Total wire length = 358668 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129978 um.
+Total wire length on LAYER met2 = 151897 um.
+Total wire length on LAYER met3 = 53339 um.
+Total wire length on LAYER met4 = 22750 um.
+Total wire length on LAYER met5 = 701 um.
+Total number of vias = 80531.
+Up-via summary (total 80531):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34811
+           met1    39474
+           met2     4971
+           met3     1231
+           met4       44
+------------------------
+               80531
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 358668 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 129978 um.
+Total wire length on LAYER met2 = 151897 um.
+Total wire length on LAYER met3 = 53339 um.
+Total wire length on LAYER met4 = 22750 um.
+Total wire length on LAYER met5 = 701 um.
+Total number of vias = 80531.
+Up-via summary (total 80531):
+
+------------------------
+ FR_MASTERSLICE        0
+            li1    34811
+           met1    39474
+           met2     4971
+           met3     1231
+           met4       44
+------------------------
+               80531
+
+
+[INFO DRT-0267] cpu time = 00:16:07, elapsed time = 00:03:10, memory = 1985.54 (MB), peak = 2129.71 (MB)
+
+[INFO DRT-0180] Post processing.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 112 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               280    1051.01
+  Tap cell                               2059    2576.22
+  Antenna cell                             51     127.62
+  Clock buffer                             20     267.76
+  Timing Repair Buffer                   1961   17603.13
+  Inverter                               2195    8239.15
+  Sequential cell                        2256   48386.41
+  Multi-Input combinational cell         4340   45795.17
+  Total                                 13162  124046.47
+Writing OpenROAD database to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/cpu.odb'…
+Writing netlist to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/cpu.nl.v'…
+Writing powered netlist to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/cpu.pnl.v'…
+Writing layout to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/cpu.def'…
+Writing timing constraints to '/home/ayeshatalha/librelane/mydesign/lab7/runs/RUN_2026-09-15_16-00-03/44-openroad-detailedrouting/cpu.sdc'…

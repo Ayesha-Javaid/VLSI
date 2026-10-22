@@ -1,0 +1,3791 @@
+{
+  "creator": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)",
+  "modules": {
+    "cpu": {
+      "attributes": {
+        "hdlname": "cpu",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:218.1-300.10"
+      },
+      "ports": {
+        "halt": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "load_ir": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "cntrl_clk": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "alu_clk": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "fetch": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "rst_": {
+          "direction": "input",
+          "bits": [ 8 ]
+        }
+      },
+      "cells": {
+        "$flatten\\ac.$procdff$167": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000000000000000000000000000000000000000000000000000000000000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:190.3-195.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 8 ],
+            "CLK": [ 4 ],
+            "D": [ 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72 ],
+            "Q": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ]
+          }
+        },
+        "$flatten\\ac.$procmux$146": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:193.14-193.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:193.10-194.19"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ],
+            "B": [ 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200 ],
+            "S": [ 201 ],
+            "Y": [ 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72 ]
+          }
+        },
+        "$flatten\\alu1.$add$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:40$39": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000001000000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000001000000",
+            "Y_WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:40.20-40.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ],
+            "B": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ],
+            "Y": [ 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329 ]
+          }
+        },
+        "$flatten\\alu1.$and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:41$40": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000001000000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000001000000",
+            "Y_WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:41.20-41.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ],
+            "B": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ],
+            "Y": [ 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393 ]
+          }
+        },
+        "$flatten\\alu1.$not$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:53$44": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:53.12-53.21"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 394 ],
+            "Y": [ 395 ]
+          }
+        },
+        "$flatten\\alu1.$procdff$153": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "0",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:38.3-50.6"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 6 ],
+            "D": [ 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459 ],
+            "Q": [ 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$59": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:46.26-46.26|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329 ],
+            "S": [ 524, 525, 526, 527, 528, 529, 530, 531 ],
+            "Y": [ 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$60_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:46.26-46.26|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 524 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$61_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:45.26-45.26|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 525 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$62_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:44.26-44.26|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 526 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$63_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:43.25-43.25|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "Y": [ 527 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$64_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:42.33-42.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 528 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$65_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:41.33-41.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 529 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$66_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:40.33-40.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 530 ]
+          }
+        },
+        "$flatten\\alu1.$procmux$67_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.18-39.18|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:39.5-49.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 531 ]
+          }
+        },
+        "$flatten\\alu1.$reduce_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:53$43": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000001000000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:53.14-53.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ],
+            "Y": [ 394 ]
+          }
+        },
+        "$flatten\\alu1.$xor$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:42$41": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000001000000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000001000000",
+            "Y_WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:42.20-42.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ],
+            "B": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ],
+            "Y": [ 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523 ]
+          }
+        },
+        "$flatten\\cntl.$auto$mem.cc:305:emit$52": {
+          "hide_name": 1,
+          "type": "$memrd_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000011",
+            "ARST_VALUE": "xxx",
+            "CE_OVER_SRST": "00000000000000000000000000000000",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "COLLISION_X_MASK": "",
+            "INIT_VALUE": "xxx",
+            "MEMID": "$flatten\\cntl.$auto$proc_rom.cc:155:do_switch$51",
+            "SRST_VALUE": "xxx",
+            "TRANSPARENCY_MASK": "",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:79.5-89.12"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "ARST": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input",
+            "SRST": "input"
+          },
+          "connections": {
+            "ADDR": [ 535, 536, 537 ],
+            "ARST": [ "0" ],
+            "CLK": [ "x" ],
+            "DATA": [ 538, 539, 540 ],
+            "EN": [ "1" ],
+            "SRST": [ "0" ]
+          }
+        },
+        "$flatten\\cntl.$auto$mem.cc:351:emit$53": {
+          "hide_name": 1,
+          "type": "$meminit",
+          "parameters": {
+            "ABITS": "00000000000000000000000000100000",
+            "MEMID": "$flatten\\cntl.$auto$proc_rom.cc:155:do_switch$51",
+            "PRIORITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000000011",
+            "WORDS": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:79.5-89.12"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "DATA": "input"
+          },
+          "connections": {
+            "ADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "DATA": [ "1", "0", "0", "0", "1", "0", "1", "1", "0", "0", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "0", "0", "0" ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:114$13": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:114.31-114.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "Y": [ 541 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120$14": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120.33-120.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 542 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:121$16": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:121.32-121.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 543 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$17": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.32-126.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 544 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$18": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.51-126.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 545 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:127$21": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:127.32-127.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 546 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:128$22": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:128.32-128.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 547 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$2": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.19-76.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 548 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$3": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.38-76.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 549 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$5": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.57-76.70"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 550 ]
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$7": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.76-76.89"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532, 533, 534 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 551 ]
+          }
+        },
+        "$flatten\\cntl.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120$15": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120.32-120.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 542 ],
+            "B": [ 395 ],
+            "Y": [ 552 ]
+          }
+        },
+        "$flatten\\cntl.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$19": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.50-126.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 545 ],
+            "B": [ 395 ],
+            "Y": [ 553 ]
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$20": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.32-126.74"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 544 ],
+            "B": [ 553 ],
+            "Y": [ 554 ]
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$4": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.18-76.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 548 ],
+            "B": [ 549 ],
+            "Y": [ 555 ]
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$6": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.18-76.71"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 555 ],
+            "B": [ 550 ],
+            "Y": [ 556 ]
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$8": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.18-76.90"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 556 ],
+            "B": [ 551 ],
+            "Y": [ 557 ]
+          }
+        },
+        "$flatten\\cntl.$procdff$162": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:92.3-97.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 8 ],
+            "CLK": [ 5 ],
+            "D": [ 538, 539, 540 ],
+            "Q": [ 535, 536, 537 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$100": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 547, "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 558, 559, 560, 561, 562, 563, 564, 565 ],
+            "Y": [ 566 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$101_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 558 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$102_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 559 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$103_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 560 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$104_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 561 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$105_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 562 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$106_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 563 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$107_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 564 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$108_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 565 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$109": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 557, 557, 557, "0", "1", "1", "1", "0" ],
+            "S": [ 567, 568, 569, 570, 571, 572, 573, 574 ],
+            "Y": [ 575 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$110_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 567 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$111_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 568 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$112_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 569 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$113_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 570 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$114_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 571 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$115_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 572 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$116_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 573 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$117_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 574 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$118": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 557, 557, "0", "0", "0", "0", "0", "0" ],
+            "S": [ 576, 577, 578, 579, 580, 581, 582, 583 ],
+            "Y": [ 201 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$119_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 576 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$120_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 577 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$121_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 578 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$122_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 579 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$123_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 580 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$124_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 581 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$125_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 582 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$126_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 583 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$127": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "0", "0", "0", "1", "1", "0", "0" ],
+            "S": [ 584, 585, 586, 587, 588, 589, 590, 591 ],
+            "Y": [ 3 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$128_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 584 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$129_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 585 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$130_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 586 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$131_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 587 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$132_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 588 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$133_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 589 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$134_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 590 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$135_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 591 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$136": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "0", "0", 541, "0", "0", "0", "0" ],
+            "S": [ 592, 593, 594, 595, 596, 597, 598, 599 ],
+            "Y": [ 2 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$137_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 592 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$138_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 593 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$139_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 594 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$140_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 595 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$141_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 596 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$142_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 597 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$143_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 598 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$144_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 599 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$82": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 546, 543, "0", "0", "0", "0", "0", "0" ],
+            "S": [ 600, 601, 602, 603, 604, 605, 606, 607 ],
+            "Y": [ 608 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$83_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 600 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$84_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 601 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$85_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 602 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$86_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 603 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$87_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 604 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$88_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 605 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$89_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 606 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$90_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 607 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$91": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 554, 552, "0", "1", "0", "0", "0", "0" ],
+            "S": [ 609, 610, 611, 612, 613, 614, 615, 616 ],
+            "Y": [ 617 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$92_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:122.22-122.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 609 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$93_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:116.34-116.34|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 610 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$94_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:115.22-115.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 611 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$95_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:111.22-111.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 612 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$96_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:107.22-107.22|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 613 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$97_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:103.33-103.33|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 614 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$98_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:102.20-102.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 615 ]
+          }
+        },
+        "$flatten\\cntl.$procmux$99_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.17-101.17|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:101.5-131.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 616 ]
+          }
+        },
+        "$flatten\\ir.$procdff$167": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000000000000000000000000000000000000000000000000000000000000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:190.3-195.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 8 ],
+            "CLK": [ 4 ],
+            "D": [ 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681 ],
+            "Q": [ 682, 683, 684, 685, 686, 532, 533, 534, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742 ]
+          }
+        },
+        "$flatten\\ir.$procmux$146": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:193.14-193.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:193.10-194.19"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 682, 683, 684, 685, 686, 532, 533, 534, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742 ],
+            "B": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ],
+            "S": [ 3 ],
+            "Y": [ 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681 ]
+          }
+        },
+        "$flatten\\mem1.$auto$proc_memwr.cc:45:proc_memwr$168": {
+          "hide_name": 1,
+          "type": "$memwr_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000101",
+            "CLK_ENABLE": "1",
+            "CLK_POLARITY": "1",
+            "MEMID": "\\mem1.memory",
+            "PORTID": "00000000000000000000000000000000",
+            "PRIORITY_MASK": "",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:171.7-171.30"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "input",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 743, 744, 745, 746, 747 ],
+            "CLK": [ 748 ],
+            "DATA": [ 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812 ],
+            "EN": [ 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876 ]
+          }
+        },
+        "$flatten\\mem1.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170$29": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.9-170.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 566 ],
+            "B": [ 877 ],
+            "Y": [ 878 ]
+          }
+        },
+        "$flatten\\mem1.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175$35": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175.9-175.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 575 ],
+            "B": [ 879 ],
+            "Y": [ 880 ]
+          }
+        },
+        "$flatten\\mem1.$logic_not$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170$28": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.18-170.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 575 ],
+            "Y": [ 877 ]
+          }
+        },
+        "$flatten\\mem1.$logic_not$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175$34": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175.17-175.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 566 ],
+            "Y": [ 879 ]
+          }
+        },
+        "$flatten\\mem1.$memrd$\\memory$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:176$36": {
+          "hide_name": 1,
+          "type": "$memrd",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000101",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "MEMID": "\\mem1.memory",
+            "TRANSPARENT": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:176.19-176.25"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 881, 882, 883, 884, 885 ],
+            "CLK": [ "x" ],
+            "DATA": [ 886, 887, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949 ],
+            "EN": [ "x" ]
+          }
+        },
+        "$flatten\\mem1.$procdff$154": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:174.3-177.6"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 748 ],
+            "D": [ 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013 ],
+            "Q": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ]
+          }
+        },
+        "$flatten\\mem1.$procmux$71": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175.9-175.23|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175.5-176.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ],
+            "B": [ 886, 887, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949 ],
+            "S": [ 880 ],
+            "Y": [ 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013 ]
+          }
+        },
+        "$flatten\\mem1.$procmux$74": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.9-170.23|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.5-171.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "S": [ 878 ],
+            "Y": [ 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876 ]
+          }
+        },
+        "$flatten\\mem1.$procmux$77": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000001000000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.9-170.23|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.5-171.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200 ],
+            "S": [ 878 ],
+            "Y": [ 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812 ]
+          }
+        },
+        "$flatten\\mem1.$procmux$80": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.9-170.23|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.5-171.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 881, 882, 883, 884, 885 ],
+            "S": [ 878 ],
+            "Y": [ 743, 744, 745, 746, 747 ]
+          }
+        },
+        "$flatten\\pc.$add$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:152$47": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:152.16-152.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1014, 1015, 1016, 1017, 1018 ],
+            "B": [ "1" ],
+            "Y": [ 1019, 1020, 1021, 1022, 1023 ]
+          }
+        },
+        "$flatten\\pc.$procdff$152": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:146.3-153.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 8 ],
+            "CLK": [ 4 ],
+            "D": [ 1024, 1025, 1026, 1027, 1028 ],
+            "Q": [ 1014, 1015, 1016, 1017, 1018 ]
+          }
+        },
+        "$flatten\\pc.$procmux$54": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:151.14-151.20|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:151.10-152.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1014, 1015, 1016, 1017, 1018 ],
+            "B": [ 1019, 1020, 1021, 1022, 1023 ],
+            "S": [ 617 ],
+            "Y": [ 1029, 1030, 1031, 1032, 1033 ]
+          }
+        },
+        "$flatten\\pc.$procmux$57": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:149.14-149.18|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:149.10-152.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1029, 1030, 1031, 1032, 1033 ],
+            "B": [ 682, 683, 684, 685, 686 ],
+            "S": [ 608 ],
+            "Y": [ 1024, 1025, 1026, 1027, 1028 ]
+          }
+        },
+        "$flatten\\smx.$procmux$68": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:209.27-209.27|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:208.5-212.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 682, 683, 684, 685, 686, 1014, 1015, 1016, 1017, 1018 ],
+            "S": [ 1034, 7 ],
+            "Y": [ 881, 882, 883, 884, 885 ]
+          }
+        },
+        "$flatten\\smx.$procmux$69_CMP0": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:209.27-209.27|/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:208.5-212.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "Y": [ 1034 ]
+          }
+        },
+        "$not$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:278$1": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:278.12-278.22"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 748 ]
+          }
+        }
+      },
+      "memories": {
+        "$flatten\\cntl.$auto$proc_rom.cc:155:do_switch$51": {
+          "hide_name": 1,
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:79.5-89.12"
+          },
+          "width": 3,
+          "start_offset": 0,
+          "size": 8
+        },
+        "mem1.memory": {
+          "hide_name": 0,
+          "attributes": {
+            "hdlname": "mem1 memory",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:167.16-167.22"
+          },
+          "width": 64,
+          "start_offset": 0,
+          "size": 32
+        }
+      },
+      "netnames": {
+        "$flatten\\ac.$0\\out[63:0]": {
+          "hide_name": 1,
+          "bits": [ 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:190.3-195.6"
+          }
+        },
+        "$flatten\\alu1.$0\\out[63:0]": {
+          "hide_name": 1,
+          "bits": [ 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:38.3-50.6"
+          }
+        },
+        "$flatten\\alu1.$add$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:40$39_Y": {
+          "hide_name": 1,
+          "bits": [ 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:40.20-40.32"
+          }
+        },
+        "$flatten\\alu1.$and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:41$40_Y": {
+          "hide_name": 1,
+          "bits": [ 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:41.20-41.32"
+          }
+        },
+        "$flatten\\alu1.$procmux$60_CMP": {
+          "hide_name": 1,
+          "bits": [ 524 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$61_CMP": {
+          "hide_name": 1,
+          "bits": [ 525 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$62_CMP": {
+          "hide_name": 1,
+          "bits": [ 526 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$63_CMP": {
+          "hide_name": 1,
+          "bits": [ 527 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$64_CMP": {
+          "hide_name": 1,
+          "bits": [ 528 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$65_CMP": {
+          "hide_name": 1,
+          "bits": [ 529 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$66_CMP": {
+          "hide_name": 1,
+          "bits": [ 530 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$procmux$67_CMP": {
+          "hide_name": 1,
+          "bits": [ 531 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu1.$reduce_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:53$43_Y": {
+          "hide_name": 1,
+          "bits": [ 394 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:53.14-53.20"
+          }
+        },
+        "$flatten\\alu1.$xor$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:42$41_Y": {
+          "hide_name": 1,
+          "bits": [ 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:42.20-42.32"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:114$13_Y": {
+          "hide_name": 1,
+          "bits": [ 541 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:114.31-114.44"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120$14_Y": {
+          "hide_name": 1,
+          "bits": [ 542 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120.33-120.46"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:121$16_Y": {
+          "hide_name": 1,
+          "bits": [ 543 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:121.32-121.45"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$17_Y": {
+          "hide_name": 1,
+          "bits": [ 544 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.32-126.45"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$18_Y": {
+          "hide_name": 1,
+          "bits": [ 545 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.51-126.64"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:127$21_Y": {
+          "hide_name": 1,
+          "bits": [ 546 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:127.32-127.45"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:128$22_Y": {
+          "hide_name": 1,
+          "bits": [ 547 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:128.32-128.45"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$2_Y": {
+          "hide_name": 1,
+          "bits": [ 548 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.19-76.32"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$3_Y": {
+          "hide_name": 1,
+          "bits": [ 549 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.38-76.51"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$5_Y": {
+          "hide_name": 1,
+          "bits": [ 550 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.57-76.70"
+          }
+        },
+        "$flatten\\cntl.$eq$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$7_Y": {
+          "hide_name": 1,
+          "bits": [ 551 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.76-76.89"
+          }
+        },
+        "$flatten\\cntl.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120$15_Y": {
+          "hide_name": 1,
+          "bits": [ 552 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:120.32-120.55"
+          }
+        },
+        "$flatten\\cntl.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$19_Y": {
+          "hide_name": 1,
+          "bits": [ 553 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.50-126.73"
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126$20_Y": {
+          "hide_name": 1,
+          "bits": [ 554 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:126.32-126.74"
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$4_Y": {
+          "hide_name": 1,
+          "bits": [ 555 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.18-76.52"
+          }
+        },
+        "$flatten\\cntl.$logic_or$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76$6_Y": {
+          "hide_name": 1,
+          "bits": [ 556 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:76.18-76.71"
+          }
+        },
+        "$flatten\\cntl.$procmux$101_CMP": {
+          "hide_name": 1,
+          "bits": [ 558 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$102_CMP": {
+          "hide_name": 1,
+          "bits": [ 559 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$103_CMP": {
+          "hide_name": 1,
+          "bits": [ 560 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$104_CMP": {
+          "hide_name": 1,
+          "bits": [ 561 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$105_CMP": {
+          "hide_name": 1,
+          "bits": [ 562 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$106_CMP": {
+          "hide_name": 1,
+          "bits": [ 563 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$107_CMP": {
+          "hide_name": 1,
+          "bits": [ 564 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$108_CMP": {
+          "hide_name": 1,
+          "bits": [ 565 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$110_CMP": {
+          "hide_name": 1,
+          "bits": [ 567 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$111_CMP": {
+          "hide_name": 1,
+          "bits": [ 568 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$112_CMP": {
+          "hide_name": 1,
+          "bits": [ 569 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$113_CMP": {
+          "hide_name": 1,
+          "bits": [ 570 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$114_CMP": {
+          "hide_name": 1,
+          "bits": [ 571 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$115_CMP": {
+          "hide_name": 1,
+          "bits": [ 572 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$116_CMP": {
+          "hide_name": 1,
+          "bits": [ 573 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$117_CMP": {
+          "hide_name": 1,
+          "bits": [ 574 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$119_CMP": {
+          "hide_name": 1,
+          "bits": [ 576 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$120_CMP": {
+          "hide_name": 1,
+          "bits": [ 577 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$121_CMP": {
+          "hide_name": 1,
+          "bits": [ 578 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$122_CMP": {
+          "hide_name": 1,
+          "bits": [ 579 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$123_CMP": {
+          "hide_name": 1,
+          "bits": [ 580 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$124_CMP": {
+          "hide_name": 1,
+          "bits": [ 581 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$125_CMP": {
+          "hide_name": 1,
+          "bits": [ 582 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$126_CMP": {
+          "hide_name": 1,
+          "bits": [ 583 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$128_CMP": {
+          "hide_name": 1,
+          "bits": [ 584 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$129_CMP": {
+          "hide_name": 1,
+          "bits": [ 585 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$130_CMP": {
+          "hide_name": 1,
+          "bits": [ 586 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$131_CMP": {
+          "hide_name": 1,
+          "bits": [ 587 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$132_CMP": {
+          "hide_name": 1,
+          "bits": [ 588 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$133_CMP": {
+          "hide_name": 1,
+          "bits": [ 589 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$134_CMP": {
+          "hide_name": 1,
+          "bits": [ 590 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$135_CMP": {
+          "hide_name": 1,
+          "bits": [ 591 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$137_CMP": {
+          "hide_name": 1,
+          "bits": [ 592 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$138_CMP": {
+          "hide_name": 1,
+          "bits": [ 593 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$139_CMP": {
+          "hide_name": 1,
+          "bits": [ 594 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$140_CMP": {
+          "hide_name": 1,
+          "bits": [ 595 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$141_CMP": {
+          "hide_name": 1,
+          "bits": [ 596 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$142_CMP": {
+          "hide_name": 1,
+          "bits": [ 597 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$143_CMP": {
+          "hide_name": 1,
+          "bits": [ 598 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$144_CMP": {
+          "hide_name": 1,
+          "bits": [ 599 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$83_CMP": {
+          "hide_name": 1,
+          "bits": [ 600 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$84_CMP": {
+          "hide_name": 1,
+          "bits": [ 601 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$85_CMP": {
+          "hide_name": 1,
+          "bits": [ 602 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$86_CMP": {
+          "hide_name": 1,
+          "bits": [ 603 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$87_CMP": {
+          "hide_name": 1,
+          "bits": [ 604 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$88_CMP": {
+          "hide_name": 1,
+          "bits": [ 605 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$89_CMP": {
+          "hide_name": 1,
+          "bits": [ 606 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$90_CMP": {
+          "hide_name": 1,
+          "bits": [ 607 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$92_CMP": {
+          "hide_name": 1,
+          "bits": [ 609 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$93_CMP": {
+          "hide_name": 1,
+          "bits": [ 610 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$94_CMP": {
+          "hide_name": 1,
+          "bits": [ 611 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$95_CMP": {
+          "hide_name": 1,
+          "bits": [ 612 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$96_CMP": {
+          "hide_name": 1,
+          "bits": [ 613 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$97_CMP": {
+          "hide_name": 1,
+          "bits": [ 614 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$98_CMP": {
+          "hide_name": 1,
+          "bits": [ 615 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\cntl.$procmux$99_CMP": {
+          "hide_name": 1,
+          "bits": [ 616 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\ir.$0\\out[63:0]": {
+          "hide_name": 1,
+          "bits": [ 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:190.3-195.6"
+          }
+        },
+        "$flatten\\mem1.$0$memwr$\\memory$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:171$23_ADDR[4:0]$25": {
+          "hide_name": 1,
+          "bits": [ 743, 744, 745, 746, 747 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:169.3-172.6"
+          }
+        },
+        "$flatten\\mem1.$0$memwr$\\memory$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:171$23_DATA[63:0]$26": {
+          "hide_name": 1,
+          "bits": [ 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:169.3-172.6"
+          }
+        },
+        "$flatten\\mem1.$0$memwr$\\memory$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:171$23_EN[63:0]$27": {
+          "hide_name": 1,
+          "bits": [ 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:169.3-172.6"
+          }
+        },
+        "$flatten\\mem1.$0\\data_out[63:0]": {
+          "hide_name": 1,
+          "bits": [ 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:174.3-177.6"
+          }
+        },
+        "$flatten\\mem1.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170$29_Y": {
+          "hide_name": 1,
+          "bits": [ 878 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.9-170.23"
+          }
+        },
+        "$flatten\\mem1.$logic_and$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175$35_Y": {
+          "hide_name": 1,
+          "bits": [ 880 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175.9-175.23"
+          }
+        },
+        "$flatten\\mem1.$logic_not$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170$28_Y": {
+          "hide_name": 1,
+          "bits": [ 877 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:170.18-170.23"
+          }
+        },
+        "$flatten\\mem1.$logic_not$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175$34_Y": {
+          "hide_name": 1,
+          "bits": [ 879 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:175.17-175.23"
+          }
+        },
+        "$flatten\\mem1.$memrd$\\memory$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:176$36_DATA": {
+          "hide_name": 1,
+          "bits": [ 886, 887, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:176.19-176.25"
+          }
+        },
+        "$flatten\\pc.$0\\count[4:0]": {
+          "hide_name": 1,
+          "bits": [ 1024, 1025, 1026, 1027, 1028 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:146.3-153.6"
+          }
+        },
+        "$flatten\\pc.$add$/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:152$47_Y": {
+          "hide_name": 1,
+          "bits": [ 1019, 1020, 1021, 1022, 1023 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:152.16-152.28"
+          }
+        },
+        "$flatten\\pc.$procmux$54_Y": {
+          "hide_name": 1,
+          "bits": [ 1029, 1030, 1031, 1032, 1033 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\smx.$procmux$69_CMP": {
+          "hide_name": 1,
+          "bits": [ 1034 ],
+          "attributes": {
+          }
+        },
+        "ac.data": {
+          "hide_name": 0,
+          "bits": [ 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200 ],
+          "attributes": {
+            "hdlname": "ac data",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:184.25-184.29"
+          }
+        },
+        "ac.enable": {
+          "hide_name": 0,
+          "bits": [ 201 ],
+          "attributes": {
+            "hdlname": "ac enable",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:186.25-186.31"
+          }
+        },
+        "ac.out": {
+          "hide_name": 0,
+          "bits": [ 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136 ],
+          "attributes": {
+            "hdlname": "ac out",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:183.25-183.28"
+          }
+        },
+        "addr": {
+          "hide_name": 0,
+          "bits": [ 881, 882, 883, 884, 885 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:229.39-229.43"
+          }
+        },
+        "alu1.data": {
+          "hide_name": 0,
+          "bits": [ 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265 ],
+          "attributes": {
+            "hdlname": "alu1 data",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:34.31-34.35"
+          }
+        },
+        "alu1.zero": {
+          "hide_name": 0,
+          "bits": [ 395 ],
+          "attributes": {
+            "hdlname": "alu1 zero",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:31.31-31.35"
+          }
+        },
+        "alu_clk": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:223.18-223.25"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:221.18-221.21"
+          }
+        },
+        "cntl.aluop": {
+          "hide_name": 0,
+          "bits": [ 557 ],
+          "attributes": {
+            "hdlname": "cntl aluop",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:74.9-74.14"
+          }
+        },
+        "cntl.inc_pc": {
+          "hide_name": 0,
+          "bits": [ 617 ],
+          "attributes": {
+            "hdlname": "cntl inc_pc",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:63.31-63.37"
+          }
+        },
+        "cntl.load_pc": {
+          "hide_name": 0,
+          "bits": [ 608 ],
+          "attributes": {
+            "hdlname": "cntl load_pc",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:64.31-64.38"
+          }
+        },
+        "cntl.mem_rd": {
+          "hide_name": 0,
+          "bits": [ 575 ],
+          "attributes": {
+            "hdlname": "cntl mem_rd",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:61.31-61.37"
+          }
+        },
+        "cntl.mem_wr": {
+          "hide_name": 0,
+          "bits": [ 566 ],
+          "attributes": {
+            "hdlname": "cntl mem_wr",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:62.31-62.37"
+          }
+        },
+        "cntl.next_state": {
+          "hide_name": 0,
+          "bits": [ 538, 539, 540 ],
+          "attributes": {
+            "enum_type": "$enum1",
+            "enum_value_000": "\\typedefs::INST_ADDR",
+            "enum_value_001": "\\typedefs::INST_FETCH",
+            "enum_value_010": "\\typedefs::INST_LOAD",
+            "enum_value_011": "\\typedefs::IDLE",
+            "enum_value_100": "\\typedefs::OP_ADDR",
+            "enum_value_101": "\\typedefs::OP_FETCH",
+            "enum_value_110": "\\typedefs::ALU_OP",
+            "enum_value_111": "\\typedefs::STORE",
+            "hdlname": "cntl next_state",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:73.28-73.38",
+            "wiretype": "\\typedefs::state_t"
+          }
+        },
+        "cntl.state": {
+          "hide_name": 0,
+          "bits": [ 535, 536, 537 ],
+          "attributes": {
+            "enum_type": "$enum1",
+            "enum_value_000": "\\typedefs::INST_ADDR",
+            "enum_value_001": "\\typedefs::INST_FETCH",
+            "enum_value_010": "\\typedefs::INST_LOAD",
+            "enum_value_011": "\\typedefs::IDLE",
+            "enum_value_100": "\\typedefs::OP_ADDR",
+            "enum_value_101": "\\typedefs::OP_FETCH",
+            "enum_value_110": "\\typedefs::ALU_OP",
+            "enum_value_111": "\\typedefs::STORE",
+            "hdlname": "cntl state",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:73.21-73.26",
+            "wiretype": "\\typedefs::state_t"
+          }
+        },
+        "cntrl_clk": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:222.18-222.27"
+          }
+        },
+        "fetch": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:224.18-224.23"
+          }
+        },
+        "halt": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:219.18-219.22"
+          }
+        },
+        "ir.out": {
+          "hide_name": 0,
+          "bits": [ 682, 683, 684, 685, 686, 532, 533, 534, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742 ],
+          "attributes": {
+            "hdlname": "ir out",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:183.25-183.28"
+          }
+        },
+        "load_ir": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:220.18-220.25"
+          }
+        },
+        "mem1.clk": {
+          "hide_name": 0,
+          "bits": [ 748 ],
+          "attributes": {
+            "hdlname": "mem1 clk",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:159.25-159.28"
+          }
+        },
+        "pc.count": {
+          "hide_name": 0,
+          "bits": [ 1014, 1015, 1016, 1017, 1018 ],
+          "attributes": {
+            "hdlname": "pc count",
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:138.24-138.29"
+          }
+        },
+        "rst_": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/ayeshatalha/librelane/mydesign/lab7/src/processor.sv:225.18-225.22"
+          }
+        }
+      }
+    }
+  }
+}
